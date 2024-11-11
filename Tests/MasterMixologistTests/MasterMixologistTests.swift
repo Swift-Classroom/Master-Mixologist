@@ -1,4 +1,5 @@
 import Testing
+@testable import MasterMixologist
 
 typealias DrinkTrack = (first: String, last: String, total: Int)?
 
@@ -35,8 +36,6 @@ struct MasterMixologistTests {
     func testMakeWedgesNoLimes() throws {
         let got = makeWedges(needed: 42, limes: [])
         #expect(got == 0)
-        XCTAssertEqual(
-            got, 0, "You have no limes to cut up so you used 0 limes; you said you used \(got).")
     }
     
     func testMakeWedgesTooFewLimes() throws {
